@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ご注文手続き | MofuMori</title>
+  <meta name="description" content="MofuMoriのご注文手続きページです。お届け先、配送方法、お支払い方法をご入力ください。">
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260523-heroimg1">
+</head>
+<body>
+  <div class="topbar">税込表示・全国配送に対応したペット用品オンラインショップ</div>
+  <header>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a class="brand" href="index.html" aria-label="MofuMori ホーム"><img src="assets/images/logo.svg" alt="MofuMori ロゴ"><span>MofuMori</span></a>
+      <div class="nav-links"><a href="catalog.html?cat=自動給餌">自動給餌</a><a href="catalog.html?cat=自動給水">自動給水</a><a href="catalog.html?cat=ケア用品">ケア用品</a><a href="catalog.html?cat=住まい用品">住まい用品</a><a href="catalog.html?cat=快適用品">快適用品</a><a href="catalog.html?cat=お散歩・しつけ">お散歩</a><a href="catalog.html?cat=メモリアル">メモリアル</a><a href="catalog.html">すべて</a></div>
+      <div class="nav-actions"><a class="outline-btn" href="catalog.html">商品一覧</a><button class="icon-btn" type="button" data-cart-toggle>カート <span class="cart-count" data-cart-count>0</span></button></div>
+    </nav>
+  </header>
+  <div class="cart-panel" data-cart-panel></div>
+  <main class="checkout-page">
+    <div class="wrap checkout-layout">
+      <section class="checkout-form-panel">
+        <div class="breadcrumb"><a href="index.html">ホーム</a> / ご注文手続き</div>
+        <h1>ご注文手続き</h1>
+        <form name="mofumori-order" method="POST" data-netlify="true" action="thanks.html" data-checkout-form>
+          <input type="hidden" name="form-name" value="mofumori-order"><input type="hidden" name="order_id" data-order-id><input type="hidden" name="order_items" data-order-items><input type="hidden" name="order_total" data-order-total>
+          <div class="form-section"><h2>お客様情報</h2><div class="form-grid"><label>お名前 <input name="name" autocomplete="name" required></label><label>メールアドレス <input type="email" name="email" autocomplete="email" required></label><label>電話番号 <input name="tel" autocomplete="tel" required></label><label>郵便番号 <input name="postal_code" autocomplete="postal-code" required></label></div></div>
+          <div class="form-section"><h2>お届け先</h2><label>住所 <input name="address" autocomplete="street-address" required></label><label>配送メモ <textarea name="delivery_note" rows="3" placeholder="配達時間の希望などがあればご記入ください。"></textarea></label></div>
+          <div class="form-section"><h2>配送・お支払い</h2><div class="choice-grid"><label><input type="radio" name="shipping" value="通常配送" checked> 通常配送</label><label><input type="radio" name="shipping" value="日時指定希望"> 日時指定希望</label></div><div class="choice-grid"><label><input type="radio" name="payment" value="銀行振込" checked> 銀行振込</label><label><input type="radio" name="payment" value="代金引換"> 代金引換</label></div></div>
+          <label class="agree-row"><input type="checkbox" required> 注文内容とお届け先を確認しました。</label>
+          <button class="pill-btn checkout-submit" type="submit">注文を確定する</button>
+          <p class="checkout-note">送信後、注文内容はショップ確認用フォームとして保存されます。オンライン決済は次の段階で接続できます。</p>
+        </form>
+      </section>
+      <aside class="checkout-summary" data-checkout-summary><h2>ご注文内容</h2><div data-checkout-items></div><div class="cart-total"><span>合計</span><span data-checkout-total>¥0</span></div><a class="outline-btn" href="catalog.html">買い物を続ける</a></aside>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <strong>MofuMori</strong>
+        <p>Pet care goods for calm, comfortable homes.</p>
+      </div>
+      <nav class="footer-links" aria-label="フッターナビゲーション">
+        <a href="shipping.html">配送・返品</a>
+        <a href="legal.html">特定商取引法に基づく表記</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="owner-info">Site owner: Yiwu Xianying Pet Products Co., Ltd. | Representative: Kaihui Tang</div>
+  </footer>
+  <script src="assets/js/products.js?v=20260523-heroimg1"></script><script src="assets/js/cart.js?v=20260523-heroimg1"></script><script src="assets/js/checkout.js?v=20260523-heroimg1"></script>
+</body>
+</html>
