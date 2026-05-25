@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">MofuMori logo</title>
+  <desc id="desc">A soft paw mark with a leaf inside a green circle.</desc>
+  <defs>
+    <linearGradient id="g" x1="38" x2="206" y1="28" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#287653"/>
+      <stop offset="1" stop-color="#d8765d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="108" fill="url(#g)"/>
+  <circle cx="82" cy="86" r="19" fill="#fffdfa"/>
+  <circle cx="121" cy="74" r="21" fill="#fffdfa"/>
+  <circle cx="160" cy="87" r="19" fill="#fffdfa"/>
+  <path d="M69 145c0-32 27-54 51-54s51 22 51 54c0 30-21 42-51 42s-51-12-51-42Z" fill="#fffdfa"/>
+  <path d="M128 154c23-10 35-30 37-54-23 5-43 21-51 45-7-12-16-22-28-30 0 27 15 47 42 39Z" fill="#287653" opacity=".92"/>
+</svg>
