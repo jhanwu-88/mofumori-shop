@@ -4,10 +4,7 @@
   const escapeText = value => String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
   function card(product) {
-    const hasVariants = Array.isArray(product.variants) && product.variants.length > 1;
-    const firstSku = Array.isArray(product.variants) && product.variants.length === 1 ? product.variants[0].sku : '';
-    const action = hasVariants ? `<a class="shop-btn" href="product.html?id=${encodeURIComponent(product.id)}">詳細を見る</a>` : `<button class="shop-btn" type="button" onclick="addToCart('${product.id}', 1, '${firstSku}')">カートに入れる</button>`;
-    return `<article class="product-card"><a class="product-image" href="product.html?id=${encodeURIComponent(product.id)}" aria-label="${escapeText(product.name)}の詳細を見る"><img alt="${escapeText(product.name)}" src="${product.image}" loading="lazy" decoding="async"></a><div class="product-body"><span class="tag">${escapeText(product.category)}</span><h3><a href="product.html?id=${encodeURIComponent(product.id)}">${escapeText(product.name)}</a></h3><div class="price-line"><span class="price">${escapeText(product.price)}</span><span class="tag">${escapeText(product.badge || product.category)}</span></div>${action}</div></article>`;
+    return `<article class="product-card"><a class="product-image" href="product.html?id=${encodeURIComponent(product.id)}" aria-label="${escapeText(product.name)}の詳細を見る"><img alt="${escapeText(product.name)}" src="${product.image}" loading="lazy" decoding="async"></a><div class="product-body"><span class="tag">${escapeText(product.category)}</span><h3><a href="product.html?id=${encodeURIComponent(product.id)}">${escapeText(product.name)}</a></h3><div class="price-line"><span class="price">${escapeText(product.price)}</span><span class="tag">${escapeText(product.badge || product.category)}</span></div><a class="shop-btn" href="product.html?id=${encodeURIComponent(product.id)}">詳細を見る</a></div></article>`;
   }
 
   function bindSlider() {

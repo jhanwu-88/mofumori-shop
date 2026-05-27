@@ -277,3 +277,6 @@ h2 { font-size: clamp(24px, 3vw, 36px); }
 .variant-option span { font-size: 13px; line-height: 1.35; overflow-wrap: anywhere; }
 .variant-option strong { color: var(--green-dark); white-space: nowrap; font-size: 14px; }
 .variant-option.active { border-color: var(--green); box-shadow: 0 0 0 2px rgba(35,107,74,.14); background: rgba(35,107,74,.05); }
+
+/* Center product card action text */
+.product-card .shop-btn { display: inline-flex; align-items: center; justify-content: center; text-align: center; }
