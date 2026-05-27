@@ -268,3 +268,12 @@ h2 { font-size: clamp(24px, 3vw, 36px); }
 /* Homepage clean product hero */
 .brand-slide { background: var(--slide-image) center center / cover no-repeat !important; }
 @media (max-width: 950px) { .brand-slide { background: linear-gradient(180deg, rgba(255,253,250,.96) 0%, rgba(255,253,250,.88) 48%, rgba(255,253,250,.2) 100%), var(--slide-image) center bottom / cover no-repeat !important; } }
+
+/* Direct variant option list */
+.variant-list { margin: 14px 0 18px; }
+.variant-label { font-size: 13px; font-weight: 850; color: var(--green-dark); margin-bottom: 8px; }
+.variant-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+.variant-option { min-height: 54px; border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 9px 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--ink); text-align: left; cursor: pointer; }
+.variant-option span { font-size: 13px; line-height: 1.35; overflow-wrap: anywhere; }
+.variant-option strong { color: var(--green-dark); white-space: nowrap; font-size: 14px; }
+.variant-option.active { border-color: var(--green); box-shadow: 0 0 0 2px rgba(35,107,74,.14); background: rgba(35,107,74,.05); }
